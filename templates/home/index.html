@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Novamedic | Consultorio Médico Integral{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+                <span class="eyebrow">Atención médica de excelencia</span>
+                <h1>Tu salud merece un equipo multidisciplinario.</h1>
+                <p>
+                    En Novamedic brindamos atención médica preventiva, diagnóstica y especializada con tecnología de vanguardia para cuidar a cada paciente con calidez y precisión.
+                </p>
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="#contacto" class="btn btn-primary btn-lg rounded-pill px-4">Solicitar cita</a>
+                </div>
+                <div class="stats mt-5">
+                    <div>
+                        <strong>18+</strong>
+                        <span>Años de experiencia</span>
+                    </div>
+                    <div>
+                        <strong>12k</strong>
+                        <span>Pacientes atendidos</span>
+                    </div>
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Apoyo en línea</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="hero-card">
+                    <img src="{% static 'img/clinic_hero.jpeg' %}" alt="Consultorio médico moderno" class="img-fluid rounded-4 hero-image">
+                    <div class="floating-badge">
+                        <span>Atención integral</span>
+                        <strong>96% satisfacción</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section py-5 bg-light" id="nosotros">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <span class="eyebrow text-primary">Consultorio</span>
+            <h2>Espacios diseñados para tu bienestar</h2>
+        </div>
+
+        <div class="photo-grid">
+            <div class="photo-item large">
+                <img src="{% static 'img/clinic_1.jpeg' %}" alt="Recepción del consultorio">
+            </div>
+            <div class="photo-item tall">
+                <img src="{% static 'img/clinic_2.jpeg' %}" alt="Sala de espera del consultorio">
+            </div>
+            <div class="photo-item">
+                <img src="{% static 'img/clinic_3.jpeg' %}" alt="Equipo médico moderno">
+            </div>
+            <div class="photo-item wide">
+                <img src="{% static 'img/clinic_4.jpeg' %}" alt="Atención al paciente en consultorio">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services py-5" id="servicios">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <span class="eyebrow text-primary">Servicios</span>
+            <h2>Diagnóstico y atención integral</h2>
+        </div>
+
+        <div class="mb-5">
+            <img src="{% static 'img/services.jpeg' %}" alt="Servicios médicos" class="services-banner">
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6" id="laboratorio">
+                <div class="service-panel h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box">🧪</div>
+                        <h3>Laboratorio clínico</h3>
+                    </div>
+                    <p>Pruebas rápidas, confiables y con resultados precisos para apoyar un diagnóstico oportuno.</p>
+                    <ul>
+                        <li>Biometría hemática y química sanguínea</li>
+                        <li>Perfil metabólico y hormonal</li>
+                        <li>Pruebas de diagnóstico preventivo</li>
+                        <li>Resultados en tiempos competitivos</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6" id="imagenes">
+                <div class="service-panel h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box">🩺</div>
+                        <h3>Imágenes diagnósticas</h3>
+                    </div>
+                    <p>Estudios radiológicos con tecnología segura para detectar y seguir condiciones médicas.</p>
+                    <ul>
+                        <li>Rayos X digital</li>
+                        <li>Ultrasonido</li>
+                        <li>Ecocardiograma</li>
+                        <li>Control por imagen para seguimiento clínico</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-us py-5 bg-white">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <div class="section-header mb-4">
+                    <span class="eyebrow text-primary">¿Por qué elegirnos?</span>
+                    <h2>Atención centrada en cada persona</h2>
+                </div>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <span>✔</span>
+                        <div>
+                            <h4>Especialistas certificados</h4>
+                            <p>Profesionales con experiencia, actualización constante y enfoque humano.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span>✔</span>
+                        <div>
+                            <h4>Diagnóstico preciso</h4>
+                            <p>Technología moderna y procesos clínicos integrales para decisiones confiables.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span>✔</span>
+                        <div>
+                            <h4>Atención cercana</h4>
+                            <p>Te acompañamos con empatia, claridad y seguimiento para cuidarte mejor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="info-panel">
+                    <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=900&q=80" alt="Doctor atendiendo paciente" class="img-fluid rounded-4">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-band py-5">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+                <h3>Agenda tu cita y cuida tu salud con confianza.</h3>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="mailto:contacto@medivital.com" class="btn btn-light btn-lg rounded-pill px-4">Contactar</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

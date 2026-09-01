@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Novamedic | Consultorio Médico{% endblock %}</title>
+    <meta name="description" content="Consultorio médico con especialistas, laboratorio y servicio de imágenes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center gap-2" href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" alt="Logo Novamedic" class="brand-logo">
+                <span>Novamedic</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#laboratorio">Laboratorio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#imagenes">Imágenes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary rounded-pill px-4" href="#contacto">Agendar cita</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-2">Tu salud, en manos de especialistas.</h3>
+                    <p class="mb-0">Consultorio médico integral con atención humana, tecnología y resultados confiables.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a href="tel:+593990090991" class="btn btn-light rounded-pill px-4 me-2">Llamar ahora</a>
+                    <a href="mailto:contacto@medivital.com" class="btn btn-outline-light rounded-pill px-4">Correo</a>
+                </div>
+            </div>
+            <hr class="my-4 border-light-subtle">
+            <div class="row small text-light">
+                <div class="col-md-6">© 2026 Novamedic. Todos los derechos reservados.</div>
+                <div class="col-md-6 text-md-end">NOVAMEDIC | NORTE - Mucho Lote 1 ( 2da Etapa ) Mz 2229 Sl 15, Guayaquil, Ecuador · +593 99 009 0991   -   NOVAMEDIC | ODONTOLOGÍA | GUAYAQUIL CENTRO, Av. Los Ríos y Alejo Lascano, frente a Luna Flowers Whatsapp: +593 97 890 1997</div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-toggle" type="button" aria-label="Abrir chat" id="chatToggle">
+            <span class="chat-icon">💬</span>
+        </button>
+
+        <div class="chat-panel" id="chatPanel">
+            <div class="chat-header">
+                <div class="chat-title-wrap">
+                    <span class="chat-title">Consultas</span>
+                    <span class="chat-status"><span class="status-dot"></span> Online</span>
+                </div>
+                <button type="button" class="chat-close" id="chatClose" aria-label="Cerrar chat">×</button>
+            </div>
+
+            <div class="chat-body">
+                <div class="chat-message operator">
+                    Hola, ¿en qué te podemos ayudar?
+                </div>
+                <div class="chat-message user">
+                    Necesito una cita para odontología.
+                </div>
+                <div class="chat-message operator">
+                    Claro, te atenderemos enseguida.
+                </div>
+            </div>
+
+            <div class="chat-input-row">
+                <input type="text" placeholder="Escribe tu mensaje..." aria-label="Escribe tu mensaje">
+                <button type="button">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/593990090991?text=Hola%20Novamedic%2C%20quiero%20agendar%20una%20cita" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat en WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.52 3.48A11.86 11.86 0 0 0 12.1 0C5.54 0 .19 5.35.19 11.9c0 2.1.55 4.16 1.6 5.96L0 24l6.34-1.66A11.92 11.92 0 0 0 12.1 23.8c6.56 0 11.91-5.35 11.91-11.9 0-3.18-1.24-6.17-3.49-8.42ZM12.1 21.7c-1.9 0-3.76-.51-5.38-1.48l-.38-.22-3.76.98 1-3.65-.25-.38A9.7 9.7 0 0 1 2.45 11.9c0-5.38 4.38-9.75 9.65-9.75A9.75 9.75 0 0 1 21.8 11.9c0 5.37-4.37 9.75-9.7 9.75Zm5.33-7.29c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.73.94-.9 1.13-.16.19-.33.21-.62.07-.29-.15-1.22-.45-2.34-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.33.44-.5.15-.16.2-.28.3-.47.1-.19.05-.36-.02-.5-.07-.15-.64-1.55-.88-2.12-.23-.56-.47-.49-.64-.5l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.44s1.03 2.82 1.17 3.02c.14.19 2.02 3.09 4.9 4.34.68.29 1.22.47 1.64.6.69.22 1.32.19 1.82.11.56-.08 1.7-.69 1.94-1.35.24-.66.24-1.23.17-1.35-.07-.12-.26-.19-.55-.34Z"/>
+        </svg>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggle = document.getElementById('chatToggle');
+        const panel = document.getElementById('chatPanel');
+        const closeBtn = document.getElementById('chatClose');
+
+        toggle.addEventListener('click', () => {
+            panel.classList.toggle('open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            panel.classList.remove('open');
+        });
+    </script>
+</body>
+</html>
